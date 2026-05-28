@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Vynyl – Player</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="player.css">
+</head>
+
+<body>
+
+  <aside class="sidebar">
+    <div class="sidebar-logo">
+      <!-- SVG LOGO HERE -->
+    </div>
+
+    <div>
+      <div class="playlists-header">
+        Your playlists
+        <button class="add-btn" onclick="addPlaylist()">+</button>
+      </div>
+    </div>
+
+    <div id="playlists-list">
+      <div class="playlist-item active" onclick="selectPlaylist(this)">
+        My Desi Dream
+      </div>
+    </div>
+  </aside>
+
+  <main class="main">
+
+    <div class="topbar">
+
+      <div class="home-icon" onclick="goHome()">
+        🏠
+      </div>
+
+      <input
+        class="search-bar"
+        type="text"
+        placeholder="search for tracks, artists, albums"
+        id="searchInput"
+        oninput="onSearch()"
+      />
+
+    </div>
+
+    <div class="content">
+
+      <div class="filters">
+        <button class="pill active" onclick="filterPill(this,'all')">ALL</button>
+        <button class="pill" onclick="filterPill(this,'music')">MUSIC</button>
+        <button class="pill" onclick="filterPill(this,'podcasts')">PODCASTS</button>
+      </div>
+
+      <section>
+        <div class="section-title">Recently Played</div>
+
+        <div class="recently-played">
+
+          <div class="recent-card" onclick="playTrack('Blue Night 1999','Various Artists','🎵')">
+            <div class="recent-thumb">🎵</div>
+            <span class="recent-name">Blue Night 1999</span>
+          </div>
+
+          <div class="recent-card" onclick="playTrack('My Desi Dream','Various Artists','🎶')">
+            <div class="recent-thumb">🎶</div>
+            <span class="recent-name">My Desi Dream</span>
+          </div>
+
+        </div>
+      </section>
+
+      <section>
+        <div class="section-title">Recommended for you</div>
+
+        <div class="rec-grid">
+
+          <div class="rec-card" onclick="playTrack('Top 20 Hits','Various','🔥')">
+            <div class="rec-art purple">TOP 20</div>
+            <div class="play-dot"></div>
+            <div class="rec-label">Top 20 hits of the month</div>
+          </div>
+
+          <div class="rec-card" onclick="playTrack('Thriller','Michael Jackson','🎤')">
+            <div class="rec-art">🎤</div>
+            <div class="play-dot"></div>
+            <div class="rec-label">Album : Thriller</div>
+          </div>
+
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <div class="player-bar">
+
+    <div class="now-playing">
+
+      <div class="now-thumb">🎧</div>
+
+      <div class="now-info">
+        <div class="track-label">Now playing</div>
+        <div class="track-name" id="trackName">Heat Waves</div>
+        <div class="track-artist" id="trackArtist">Glass Animals</div>
+      </div>
+
+    </div>
+
+    <div class="controls">
+
+      <div class="ctrl-buttons">
+
+        <button class="ctrl-btn" onclick="prevTrack()">⏮</button>
+
+        <button class="ctrl-btn play" id="playBtn" onclick="togglePlay()">
+          ▶
+        </button>
+
+        <button class="ctrl-btn" onclick="nextTrack()">⏭</button>
+
+      </div>
+
+      <div class="progress-row">
+
+        <span class="time">2:04</span>
+
+        <div class="progress-track" onclick="seekTrack(event)">
+          <div class="progress-fill" id="progressFill">
+            <div class="progress-thumb"></div>
+          </div>
+        </div>
+
+        <span class="time">3:19</span>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <script src="player.js"></script>
+</body>
+</html>

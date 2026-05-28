@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <title>Vynyl – Sign Up</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="signup.css">
+</head>
+
+<body>
+
+  <div class="container">
+
+    <div class="logo-wrap">
+
+      <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+
+        <defs>
+
+          <radialGradient id="vg" cx="50%" cy="45%" r="50%">
+            <stop offset="0%" stop-color="#2a1a0e"/>
+            <stop offset="100%" stop-color="#0d0805"/>
+          </radialGradient>
+
+          <radialGradient id="shine" cx="35%" cy="30%" r="40%">
+            <stop offset="0%" stop-color="#ffffff" stop-opacity="0.18"/>
+            <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+          </radialGradient>
+
+        </defs>
+
+        <circle cx="50" cy="50" r="48" fill="url(#vg)"/>
+
+        <circle cx="50" cy="50" r="44"
+          fill="none"
+          stroke="#1a0f08"
+          stroke-width="0.5"
+          opacity="0.6"/>
+
+        <circle cx="50" cy="50" r="40"
+          fill="none"
+          stroke="#1a0f08"
+          stroke-width="0.5"
+          opacity="0.6"/>
+
+        <circle cx="50" cy="50" r="36"
+          fill="none"
+          stroke="#1a0f08"
+          stroke-width="0.5"
+          opacity="0.6"/>
+
+        <circle cx="50" cy="50" r="32"
+          fill="none"
+          stroke="#1a0f08"
+          stroke-width="0.5"
+          opacity="0.5"/>
+
+        <ellipse cx="35" cy="30"
+          rx="10"
+          ry="15"
+          fill="#ffffff"
+          opacity="0.13"
+          transform="rotate(-20 35 30)"/>
+
+        <ellipse cx="28" cy="50"
+          rx="6"
+          ry="10"
+          fill="#ffffff"
+          opacity="0.07"
+          transform="rotate(10 28 50)"/>
+
+        <circle cx="50" cy="50" r="18" fill="#d4b97a"/>
+        <circle cx="50" cy="50" r="12" fill="#e8d5a3"/>
+        <circle cx="50" cy="50" r="4" fill="#fff"/>
+
+        <circle cx="50" cy="50" r="48" fill="url(#shine)"/>
+
+      </svg>
+
+    </div>
+
+    <h1>
+      Sign up to<br>
+      start listening
+    </h1>
+
+    <div class="form-group">
+
+      <label>Email address</label>
+
+      <input
+        type="email"
+        placeholder="name@gmail.com"
+        id="email"
+      />
+
+    </div>
+
+    <button class="btn-next" onclick="handleNext()">
+      Next
+    </button>
+
+    <div class="divider-row">
+      <span>or</span>
+    </div>
+
+    <button class="btn-phone">
+      Sign up with phone number
+    </button>
+
+    <p class="login-text">
+      Already have an account?<br>
+
+      <a href="login.html">
+        Log in
+      </a>
+    </p>
+
+  </div>
+
+  <script src="signup.js"></script>
+
+</body>
+</html>
